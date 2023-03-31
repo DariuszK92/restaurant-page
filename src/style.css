@@ -1,6 +1,7 @@
 *{
     margin: 0;
     height: 100%;
+    overflow-y: auto;
 }
 
 body{
@@ -16,11 +17,13 @@ body{
     grid-template-rows: 80px 1fr;
     color: white;
     background: url('/src/background.jpg');
+    position: relative;
 }
 
 .nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    overflow-y:hidden;
   
 }
 
@@ -46,17 +49,48 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+ 
 }
 
 .card{
-    width: 90%;
-    height: 200px;
+    width: clamp(200px, 90%, 1000px);
     background-color: black;
     opacity: 0.75;
     border: 5px gray solid;
     border-radius: 15px;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
+    position: absolute;
+    top: 120px;
+    margin-bottom: 40px;
 }
 
+.card > div, .card>h2{
+    height: 50px;
+    font-size: 32px;
+    margin-top: 15px;
+}
 
+.card > div{
+    font-size: 20px;
+}
+
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+    height: 100%;
+  }
+  
+
+  /*MENU*/
+
+  .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }

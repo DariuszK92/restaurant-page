@@ -1,4 +1,5 @@
 import createContact from './contact'
+import createMenu from './menu'
 
 function createNav(){
     const nav = document.createElement('div');
@@ -8,6 +9,7 @@ function createNav(){
         home.classList.add('clicked');
         contact.classList.remove('clicked');
         menu.classList.remove('clicked');
+        removeChilds();
       });
     home.innerText = 'HOME'
     const menu = document.createElement('div');
@@ -15,6 +17,8 @@ function createNav(){
         menu.classList.add('clicked');
         contact.classList.remove('clicked');
         home.classList.remove('clicked');
+        removeChilds();
+        createMenu();
       });
     menu.innerText='MENU'
     const contact = document.createElement('div');
@@ -23,7 +27,9 @@ function createNav(){
         contact.classList.add('clicked');
         menu.classList.remove('clicked');
         home.classList.remove('clicked');
+        removeChilds();
         createContact();
+
       });
     contact.innerText="CONTACT"
     nav.appendChild(home);
@@ -50,6 +56,13 @@ function createMain(){
     content.appendChild(createNav());
     content.appendChild(createMain());
     
+  }
+
+  function removeChilds(){
+    const card = document.querySelector('.card');
+    while (card.firstChild) {
+        card.removeChild(card.lastChild);
+      }
   }
   
   export default initializeWebsite;
