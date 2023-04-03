@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 *{
     margin: 0;
     height: 100%;
@@ -43,6 +45,7 @@ body{
 .nav > div:hover, .nav>div.clicked{
     opacity:1;
     font-weight:800;
+    font-size: 25px;
 }
 
 .main{
@@ -65,16 +68,19 @@ body{
     position: absolute;
     top: 120px;
     margin-bottom: 40px;
+    height: auto;
+    padding-bottom: 30px;
 }
 
 .card > div, .card>h2{
-    height: 50px;
+    height: auto;
     font-size: 32px;
     margin-top: 15px;
 }
 
 .card > div{
     font-size: 20px;
+    overflow: unset;
 }
 
 /* 
@@ -93,4 +99,45 @@ body{
     flex-direction: row;
     justify-content: space-between;
     width: 90%;
+  }
+
+  h2, h3 {
+    overflow:hidden;
+    display: block;
+    height: auto;
+    width: 90%;
+  }
+
+  h3 { 
+    margin-top: 20px;
+  }
+
+  h3 { 
+    font-size: 1.5rem;
+  }
+
+  div.ingredients {
+    font-style: italic;
+    font-size: 1rem;
+    align-self: flex-start;
+    margin-top: 5px;
+    margin-left: 5%;
+  }
+
+  .margin {
+    height: 30px;
+  }
+
+  /* Home */
+  h1 {
+    font-size: 3.3rem;
+    font-family: 'Patrick Hand', cursive;
+    height: auto;
+  }
+
+  img {
+    width: 90%;
+    margin-top: 40px;
+    object-fit: contain;
+    background-image: url(/src/pizza.jpg);
   }

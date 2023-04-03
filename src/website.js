@@ -1,5 +1,7 @@
 import createContact from './contact'
 import createMenu from './menu'
+import createHome from './home'
+
 
 function createNav(){
     const nav = document.createElement('div');
@@ -10,6 +12,7 @@ function createNav(){
         contact.classList.remove('clicked');
         menu.classList.remove('clicked');
         removeChilds();
+        createHome();
       });
     home.innerText = 'HOME'
     const menu = document.createElement('div');
@@ -55,6 +58,7 @@ function createMain(){
     const content = document.getElementById("content");
     content.appendChild(createNav());
     content.appendChild(createMain());
+    createHome()
     
   }
 
@@ -64,5 +68,7 @@ function createMain(){
         card.removeChild(card.lastChild);
       }
   }
+
+
   
   export default initializeWebsite;

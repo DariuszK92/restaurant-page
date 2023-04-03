@@ -8,7 +8,7 @@ function createContact(){
   const telephone = document.createElement('div');
   telephone.innerText = "Call us +49 921-001-982"
   const email = document.createElement('div');
-  email.innerText = "Send us an email at: Tessima@contact.com"
+  email.innerText = "Or send us an email at: Tessima@contact.com"
   const local = document.createElement('div');
   local.setAttribute('id', 'map');
   card.appendChild(title)
