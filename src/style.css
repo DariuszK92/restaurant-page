@@ -76,6 +76,7 @@ body{
     height: auto;
     font-size: 32px;
     margin-top: 15px;
+    text-align: center;
 }
 
 .card > div{
@@ -141,3 +142,9 @@ body{
     object-fit: contain;
     background-image: url(/src/pizza.jpg);
   }
+
+
+ #map {
+  width: 90%;
+  height: 500px;
+}
